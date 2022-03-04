@@ -32,3 +32,16 @@ class Post(models.Model):
   tags = TaggableManager()
 
 ```
+
+### Get Tags
+```
+Post.tags.all()
+
+```
+
+### Get Objects with tag 
+
+```
+Post.objects.filter(tags__name__in=["delicious", "red"])
+
+```
